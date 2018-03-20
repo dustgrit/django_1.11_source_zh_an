@@ -135,6 +135,8 @@ class ManagementUtility(object):
     Encapsulates the logic of the django-admin and manage.py utilities.
     """
     def __init__(self, argv=None):
+	
+		# 获取命令行参数
         self.argv = argv or sys.argv[:]
         self.prog_name = os.path.basename(self.argv[0])
         self.settings_exception = None
